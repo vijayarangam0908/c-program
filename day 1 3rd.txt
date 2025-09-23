@@ -1,0 +1,11 @@
+#include<stdio.h>
+void main()
+{
+int a=1,b=3,c=6;
+++a;
+--b;
+printf("%d/n",a);
+}
+
+output:
+2/n

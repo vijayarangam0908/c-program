@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+    int a=7;
+    if(a%2==0)
+    {
+        printf("a is even");
+    }
+    else{
+        printf("a is odd");
+    }
+}
+
+output:
+a is odd
