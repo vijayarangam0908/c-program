@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int arr[100],n,i,x,count=0;
+    printf("Enter number of elements : ");
+    scanf("%d",&n);
+    printf("Enter %d elements:\n");
+    for(i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+printf("Enter number to count: ");
+scanf("%d",&x);
+    for(i=0;i<n;i++){
+        if(arr[i]==x)
+        count++;
+    }
+    printf("%d occurs %d times\n",x,count);
+    
+    return 0;
+}
+
+output;
+Enter number of elements : 5
+Enter 5 elements:
+5
+1 3 5 6 7
+Enter number to count: 7 occurs 0 times
