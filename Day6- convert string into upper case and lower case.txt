@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <ctype.h>
+
+void toUppercase(char *str) {
+    for (int i = 0; str[i] != '\0'; i++) {
+        str[i] = toupper(str[i]);
+    }
+}
+
+int main() {
+    char myString[] = "Hello World";
+    printf("Original string: %s\n", myString);
+
+    toUppercase(myString);
+    printf("Uppercase string: %s\n", myString);
+
+    return 0;
+}
+
+output;
+Original string: Hello World
+Uppercase string: HELLO WORLD

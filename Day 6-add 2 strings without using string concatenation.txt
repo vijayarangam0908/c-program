@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h> 
+
+void combineStrings(char *result, const char *s1, const char *s2) {
+    int i = 0;
+    int j = 0;
+    while (s1[i] != '\0') {
+        result[i] = s1[i];
+        i++;
+    }
+    while (s2[j] != '\0') {
+        result[i + j] = s2[j];
+        j++;
+    }
+    result[i + j] = '\0';
+}
+
+int main() {
+    char str1[] = "Hello ";
+    char str2[] = "World!";
+    char combined[50]; 
+
+    combineStrings(combined, str1, str2);
+    printf("%s\n", combined); 
+
+    return 0;
+}
+
+output;
+
+Hello World!

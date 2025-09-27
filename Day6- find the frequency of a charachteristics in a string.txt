@@ -1,0 +1,36 @@
+#include <stdio.h>
+    #include <string.h>
+
+    void frequency(int freq[]) {
+        for (int i = 0; i < 26; i++) {
+            if (freq[i] != 0) {
+                printf("%c = %d Times\n", i + 'a', freq[i]);
+            }
+        }
+    }
+
+    void Solve() {
+        char s[1000];
+        int i = 0;
+        printf("Enter the string: ");
+        scanf("%s", s);
+        int freq[26] = {0}; 
+        while (s[i] != '\0') {
+            freq[s[i] - 'a']++; 
+            i++;
+        }
+        frequency(freq);
+    }
+
+    int main() {
+        Solve();
+        return 0;
+    }
+
+output;
+Enter the string: vijay
+a = 1 Times
+i = 1 Times
+j = 1 Times
+v = 1 Times
+y = 1 Times

@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h> 
+
+int countWords(char *str) {
+    if (str == NULL || *str == '\0') { 
+        return 0;
+    }
+
+    int wordCount = 0;
+    int inWord = 0; 
+    for (int i = 0; str[i] != '\0'; i++) {
+       
+        if (str[i] == ' ' || str[i] == '\n' || str[i] == '\t') {
+            inWord = 0; // Not in a word
+        } else if (inWord == 0) {
+  
+            wordCount++;
+            inWord = 1; 
+        }
+    }
+    return wordCount;
+}
+
+int main() {
+    char sentence1[] = "This is a sample sentence.";
+    char sentence2[] = "  Another sentence with  multiple   spaces.  ";
+    char sentence3[] = "OneWord";
+    char sentence4[] = " "; 
+    char sentence5[] = "  "; 
+    printf("'%s' has %d words.\n", sentence1, countWords(sentence1));
+    printf("'%s' has %d words.\n", sentence2, countWords(sentence2));
+    printf("'%s' has %d words.\n", sentence3, countWords(sentence3));
+    printf("'%s' has %d words.\n", sentence4, countWords(sentence4));
+    printf("'%s' has %d words.\n", sentence5, countWords(sentence5));
+
+    return 0;
+}
+
+output;
+This is a sample sentence.' has 5 words.
+'  Another sentence with  multiple   spaces.  ' has 5 words.
+'OneWord' has 1 words.
+' ' has 0 words.
+'  ' has 0 words.
